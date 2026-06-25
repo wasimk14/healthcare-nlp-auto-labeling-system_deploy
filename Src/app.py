@@ -27,7 +27,10 @@ TEMPLATE_PATH = BASE_DIR / "templates"
 
 from flask import Flask, render_template, request
 from pathlib import Path
-from inference import extract_entities
+try:
+    from .inference import extract_entities
+except ImportError:
+    from inference import extract_entities
 
 app = Flask(__name__, template_folder=str(TEMPLATE_PATH))
 
