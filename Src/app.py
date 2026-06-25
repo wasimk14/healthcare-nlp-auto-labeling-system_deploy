@@ -10,7 +10,7 @@ import spacy
 
 # Confirming and setting project path
 
-BASE_DIR = Path.cwd().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 RAW_DIR = BASE_DIR / "Data" / "Raw" #Contains datasets csv
 PROJECT_ROOT = BASE_DIR / "Data" / "Processed"
 SPLIT_DATA = BASE_DIR / "Data" / "Splits"
