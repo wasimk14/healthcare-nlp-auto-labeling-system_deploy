@@ -1,6 +1,8 @@
+from pathlib import Path
 import spacy
 
-MODEL_PATH = "../Models/spacy_baseline/model-best"
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = BASE_DIR / "Models" / "spacy_baseline" / "model-best"
 
 nlp = spacy.load(MODEL_PATH)
 
